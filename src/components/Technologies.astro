@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Stack Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .tech-card {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .tech-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .bg-gradient-mesh {
+            background: 
+                radial-gradient(ellipse at 20% 0%, rgba(120, 119, 198, 0.3), transparent 50%),
+                radial-gradient(ellipse at 80% 100%, rgba(255, 119, 198, 0.2), transparent 50%),
+                radial-gradient(ellipse at 0% 100%, rgba(120, 219, 255, 0.2), transparent 50%),
+                linear-gradient(135deg, #0f1419 0%, #1a202c 50%, #2d3748 100%);
+        }
+        
+        .icon-tech {
+            transition: all 0.3s ease;
+        }
+        
+        .tech-card:hover .icon-tech {
+            transform: scale(1.1);
+        }
+        
+        .skill-bar {
+            display: flex;
+            gap: 2px;
+            justify-content: center;
+            margin-top: 8px;
+        }
+        
+        .skill-dot {
+            width: 8px;
+            height: 3px;
+            border-radius: 2px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .skill-dot.active {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            box-shadow: 0 0 6px rgba(59, 130, 246, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-gradient-mesh min-h-screen">
+    <section id="tecnologias" class="py-20">
+        <!-- <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> -->
+            <!-- Título Principal -->
+            <!-- <div class="text-center mb-16"> -->
+                <!-- <h2 class="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
+                    Tech Stack
+                </h2> -->
+                <!-- <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                    Tecnologías modernas para crear soluciones digitales escalables y eficientes
+                </p> -->
+                <!-- <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div> -->
+            </div>
+
+            <!-- Frontend Development -->
+            <div class="mb-16">
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-white text-center mb-6">Frontend Development</h3>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <div class="tech-card rounded-xl p-6 text-center">
+                        <img src="/icons/html.svg" alt="HTML5" class="icon-tech w-16 h-16 mx-auto mb-4" />
+                        <h4 class="text-white font-semibold text-lg">HTML5</h4>
+                        <div class="skill-bar">
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot "></div>
+                            <div class="skill-dot "></div>
+                            <div class="skill-dot "></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card rounded-xl p-6 text-center">
+                        <img src="/icons/css.svg" alt="CSS3" class="icon-tech w-16 h-16 mx-auto mb-4" />
+                        <h4 class="text-white font-semibold text-lg">CSS3</h4>
+                        <div class="skill-bar">
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot "></div>
+                            <div class="skill-dot "></div>
+                            <div class="skill-dot "></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card rounded-xl p-6 text-center">
+                        <img src="/icons/javascript.svg" alt="JavaScript" class="icon-tech w-16 h-16 mx-auto mb-4" />
+                        <h4 class="text-white font-semibold text-lg">JavaScript</h4>
+                        <div class="skill-bar">
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card rounded-xl p-6 text-center">
+                        <img src="/icons/typescript.svg" alt="TypeScript" class="icon-tech w-16 h-16 mx-auto mb-4" />
+                        <h4 class="text-white font-semibold text-lg">TypeScript</h4>
+                        <div class="skill-bar">
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card rounded-xl p-6 text-center">
+                        <img src="/icons/react.svg" alt="React" class="icon-tech w-16 h-16 mx-auto mb-4" />
+                        <h4 class="text-white font-semibold text-lg">React</h4>
+                        <div class="skill-bar">
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot "></div>
+                            <div class="skill-dot "></div>
+                            <div class="skill-dot "></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card rounded-xl p-6 text-center">
+                        <img src="/icons/flutter.svg" alt="Flutter" class="icon-tech w-16 h-16 mx-auto mb-4" />
+                        <h4 class="text-white font-semibold text-lg">Flutter</h4>
+                        <div class="skill-bar">
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot "></div>
+                            <div class="skill-dot "></div>
+                            <div class="skill-dot"></div>
+                            <div class="skill-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Development -->
+            <div class="mb-16">
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-white text-center mb-6">Backend Development</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="tech-card rounded-xl p-8 text-center">
+                        <img src="/icons/nodejs.svg" alt="Node.js" class="icon-tech w-20 h-20 mx-auto mb-6" />
+                        <h4 class="text-white font-bold text-xl">Node.js</h4>
+                        <div class="skill-bar">
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot "></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card rounded-xl p-8 text-center">
+                        <img src="/icons/golang.svg" alt="Golang" class="icon-tech w-20 h-20 mx-auto mb-6" />
+                        <h4 class="text-white font-bold text-xl">Golang</h4>
+                        <div class="skill-bar">
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot "></div>
+                            <div class="skill-dot "></div>
+                            <div class="skill-dot"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card rounded-xl p-8 text-center">
+                        <img src="/icons/php.svg" alt="PHP" class="icon-tech w-20 h-20 mx-auto mb-6" />
+                        <h4 class="text-white font-bold text-xl">PHP</h4>
+                        <div class="skill-bar">
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot"></div>
+                            <div class="skill-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Database & Storage -->
+            <div class="mb-16">
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-white text-center mb-6">Database & Storage</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="tech-card rounded-xl p-8 text-center">
+                        <img src="/icons/mongodb.svg" alt="MongoDB" class="icon-tech w-20 h-20 mx-auto mb-6" />
+                        <h4 class="text-white font-bold text-xl">MongoDB</h4>
+                        <div class="skill-bar">
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot "></div>
+                            <div class="skill-dot "></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card rounded-xl p-8 text-center">
+                        <img src="/icons/postgresql.svg" alt="PostgreSQL" class="icon-tech w-20 h-20 mx-auto mb-6" />
+                        <h4 class="text-white font-bold text-xl">PostgreSQL</h4>
+                        <div class="skill-bar">
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot "></div>
+                            <div class="skill-dot"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card rounded-xl p-8 text-center">
+                        <img src="/icons/redis.svg" alt="Redis" class="icon-tech w-20 h-20 mx-auto mb-6" />
+                        <h4 class="text-white font-bold text-xl">Redis</h4>
+                        <div class="skill-bar">
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cloud & DevOps -->
+            <div class="mb-16">
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-white text-center mb-6">Cloud & DevOps</h3>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <div class="tech-card rounded-xl p-6 text-center">
+                        <img src="/icons/azure.svg" alt="Azure" class="icon-tech w-16 h-16 mx-auto mb-4" />
+                        <h4 class="text-white font-semibold text-lg">Azure</h4>
+                        <div class="skill-bar">
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot"></div>
+                            <div class="skill-dot"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card rounded-xl p-6 text-center">
+                        <img src="/icons/google-cloud.svg" alt="Google Cloud" class="icon-tech w-16 h-16 mx-auto mb-4" />
+                        <h4 class="text-white font-semibold text-lg">Google Cloud</h4>
+                        <div class="skill-bar">
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot"></div>
+                            <div class="skill-dot"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card rounded-xl p-6 text-center">
+                        <img src="/icons/firebase.svg" alt="Firebase" class="icon-tech w-16 h-16 mx-auto mb-4" />
+                        <h4 class="text-white font-semibold text-lg">Firebase</h4>
+                        <div class="skill-bar">
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot "></div>
+                            <div class="skill-dot "></div>
+                            <div class="skill-dot"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card rounded-xl p-6 text-center">
+                        <img src="/icons/docker.svg" alt="Docker" class="icon-tech w-16 h-16 mx-auto mb-4" />
+                        <h4 class="text-white font-semibold text-lg">Docker</h4>
+                        <div class="skill-bar">
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot "></div>
+                            <div class="skill-dot "></div>
+                            <div class="skill-dot "></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card rounded-xl p-6 text-center">
+                        <img src="/icons/kubernetes.svg" alt="Kubernetes" class="icon-tech w-16 h-16 mx-auto mb-4" />
+                        <h4 class="text-white font-semibold text-lg">Kubernetes</h4>
+                        <div class="skill-bar">
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot"></div>
+                            <div class="skill-dot"></div>
+                            <div class="skill-dot"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card rounded-xl p-6 text-center">
+                        <img src="/icons/gitlab.svg" alt="GitLab" class="icon-tech w-16 h-16 mx-auto mb-4" />
+                        <h4 class="text-white font-semibold text-lg">GitLab</h4>
+                        <div class="skill-bar">
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot active"></div>
+                            <div class="skill-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

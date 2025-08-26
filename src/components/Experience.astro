@@ -1,0 +1,64 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+  {
+    date: "Agosto 2022 - Actualmente...",
+    title: "Desarollador Full Stack",
+    company: "IX Comercio",
+    description:
+      "Especialista en desarrollo de microservicios y soluciones cloud-native con más de 3 años de experiencia en el sector retail y e-commerce. A cargo del diseño, desarrollo y mantenimiento de sistemas críticos de precios, disponibilidad y gestión de productos, implementando arquitecturas escalables en plataformas cloud como Google Cloud Platform y Microsoft Azure. Mi experiencia abarca desde la optimización de bases de datos y procedimientos almacenados hasta la implementación de soluciones de alta disponibilidad capaces de procesar miles de transacciones diariamente. Especializado en tecnologías como TypeScript, JavaScript, Java, Golang y PostgreSQL, con un enfoque en la mejora continua del rendimiento operativo y la escalabilidad de sistemas en entornos empresariales dinámicos.",
+    technologies: [
+      "azure",
+      "postgresql",
+      "javascript",
+      "mongodb",
+      "typescript",
+      "react",
+      "redis",
+      "gitlab",
+    ],
+  },
+  {
+    date: "Febrero 2021 - Julio 2022",
+    title: "Desarollador Backend",
+    company: "Falabella - BC Tecnologia",
+    description:
+      "A cargo del mantenimiento y desarrollo de nuevas funcionalidades para servicios de precios, disponibilidad y productos, con un enfoque en el sector retail a nivel latinoamericano. Estas aplicaciones están basadas en microservicios diseñados específicamente para plataformas de Google Cloud, garantizando soluciones escalables y de alto rendimiento. Mi labor se centra en la implementación de estrategias que optimicen la eficiencia operativa y mejoren la adaptabilidad de los servicios en entornos dinámicos y cambiantes.",
+    technologies: [
+      "golang",
+      "postgresql",
+      "javascript",
+      "docker",
+      "kubernetes",
+      "google",
+      "firebase",
+      "gitlab",
+    ],
+  },
+  {
+    date: "Julio 2018 - Septiembre 2018",
+    title: "Practica Laboral II",
+    company: "Impla LTDA",
+    description:
+      "Desarrollo de sitios web en Joomla y creación de material publicitario digital para potencia la visibilidad en línea de los clientes",
+    technologies: ["joomla", "php", "css", "html"],
+  },
+  {
+    date: "Enero 2018 - Marzo 2018",
+    title: "Practica Laboral I",
+    company: "INIA Quilamapu",
+    description:
+      "Soporte técnico y atención en Help Desk, Solucionando problemas de hardware y software y brindando soporte general a usuarios.",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

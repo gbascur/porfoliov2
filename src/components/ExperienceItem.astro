@@ -1,0 +1,121 @@
+---
+import LinkInline from "./LinkInline.astro"
+
+interface Props {
+  title: string
+  company: string
+  description: string
+  link?: string
+  date: string
+  technologies?: string[]
+}
+
+const { title, company, description, link, date, technologies } = Astro.props
+---
+
+<div
+  class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+>
+  <div class="relative pb-12 md:col-span-2">
+    <div class="sticky top-0">
+      <span class="text-yellow-400 -left-[42px] absolute rounded-full text-5xl"
+        >&bull;</span
+      >
+
+      <h3 class="text-xl font-bold text-yellow-400">{title}</h3>
+      <h4 class="font-semibold text-xl text-gray-600 dark:text-white">{company}</h4>
+      <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">{date}</time>
+    </div>
+  </div>
+  <div class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3">
+    {description}
+    {technologies && technologies.length > 0 && (
+      <div class="flex gap-4 mt-2">
+        {technologies.map((tech) => (
+          <div class="flex items-center justify-center">
+            {tech === "vue" && (
+              <img src="/vue.svg" alt="Vue" class="w-8 h-8 animate-bounce saturate-[0.8]" />
+            )}
+            {tech === "node" && (
+              <img src="/node.svg" alt="Node.js" class="w-8 h-8 animate-bounce saturate-[0.8]" />
+            )}
+            {tech === "azure" && (
+              <img src="/icons/azure.svg" alt="Azure" class="w-8 h-8 animate-bounce saturate-[0.8]" />
+            )}
+            {tech === "postgresql" && (
+              <img src="/icons/postgresql.svg" alt="PostgreSQL" class="w-8 h-8 animate-bounce saturate-[0.8]" />
+            )}
+            {tech === "javascript" && (
+              <img src="/icons/javascript.svg" alt="JavaScript" class="w-8 h-8 animate-bounce saturate-[0.8]" />
+            )}
+            {tech === "mongodb" && (
+              <img src="/icons/mongodb.svg" alt="MongoDB" class="w-8 h-8 animate-bounce saturate-[0.8]" />
+            )}
+            {tech === "typescript" && (
+              <img src="/icons/typescript.svg" alt="TypeScript" class="w-8 h-8 animate-bounce saturate-[0.8]" />
+            )}
+            {tech === "react" && (
+              <img src="/icons/react.svg" alt="React" class="w-8 h-8 animate-bounce saturate-[0.8]" />
+            )}
+            {tech === "redis" && (
+              <img src="/icons/redis.svg" alt="Redis" class="w-8 h-8 animate-bounce saturate-[0.8]" />
+            )}
+            {tech === "google" && (
+              <img src="/icons/google-cloud.svg" alt="Google" class="w-8 h-8 animate-bounce saturate-[0.8]" />
+            )}
+            {tech === "kubernetes" && (
+              <img src="/icons/kubernetes.svg" alt="Kubernetes" class="w-8 h-8 animate-bounce saturate-[0.8]" />
+            )}
+            {tech === "docker" && (
+              <img src="/icons/docker.svg" alt="Docker" class="w-8 h-8 animate-bounce saturate-[0.8]" />
+            )}
+            {tech === "firebase" && (
+              <img src="/icons/firebase.svg" alt="Firebase" class="w-8 h-8 animate-bounce saturate-[0.8]" />
+            )}
+            {tech === "golang" && (
+              <img src="/icons/golang.svg" alt="Golang" class="w-8 h-8 animate-bounce saturate-[0.8]" />
+            )}
+            {tech === "php" && (
+              <img src="/icons/php.svg" alt="PHP" class="w-8 h-8 animate-bounce saturate-[0.8]" />
+            )}
+            {tech === "html" && (
+              <img src="/icons/html.svg" alt="Html" class="w-8 h-8 animate-bounce saturate-[0.8]" />
+            )}
+            {tech === "css" && (
+              <img src="/icons/css.svg" alt="Css" class="w-8 h-8 animate-bounce saturate-[0.8]" />
+            )}
+            {tech === "joomla" && (
+              <img src="/icons/joomla.svg" alt="Joomla" class="w-8 h-8 animate-bounce saturate-[0.8]" />
+            )}
+            {tech === "gitlab" && (
+              <img src="/icons/gitlab.svg" alt="Gitlab" class="w-8 h-8 animate-bounce saturate-[0.8]" />
+            )}
+          </div>
+        ))}
+      </div>
+    )}
+
+    {
+      link && (
+        <LinkInline href={link}>
+          Saber más{" "}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 icon icon-tabler icon-tabler-chevron-right"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M9 6l6 6l-6 6" />
+          </svg>
+        </LinkInline>
+      )
+    }
+  </div>
+</div>
