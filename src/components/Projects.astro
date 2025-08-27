@@ -8,6 +8,7 @@ import LinkButton from "./LinkButton.astro";
 import Html from "./icons/Html.astro";
 import Css from "./icons/Css.astro";
 import Flutter from "./icons/Flutter.astro";
+import Work from "./icons/Work.astro";
 
 const TAGS = {
   NEXT: {
@@ -62,8 +63,7 @@ const PROJECTS = [
     description:
       "Aplicación movil para administrar gastos personales, con autenticación y sincronización en tiempo real.",
     // link: "https://adventjs.dev",
-    github: "https://github.com/gbascur/piggetz-app",
-
+    work: "https://pleasewait.co.uk/",
     image: "/projects/piggetz.webp",
     tags: [TAGS.FLUTTER],
   },
@@ -72,7 +72,7 @@ const PROJECTS = [
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link, github, work }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -117,6 +117,12 @@ const PROJECTS = [
                 <LinkButton href={link}>
                   <Link class="size-4" />
                   Preview
+                </LinkButton>
+              )}
+              {work && (
+                <LinkButton href={work}>
+                  <Work class="size-4" />
+                  Working on Website
                 </LinkButton>
               )}
             </footer>
