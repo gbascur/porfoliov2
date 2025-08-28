@@ -19,47 +19,44 @@ import Technologies from "@/components/Technologies.astro"
   description="Soy Gaspar Bascur, un desarrollador backend con 4 años de experiencia. En este porfolio podrás ver mi experiencia laboral, proyectos y saber más sobre mí."
 >
   <main class="px-4">
-		<SectionContainer class="w-full mx-auto lg:w-[740px] py-44">
-      <Hero>
-      </slot>
-    </Hero>
+    <!-- Contenedor más amplio para el Hero -->
+    <SectionContainer class="w-full mx-auto lg:w-[1000px] xl:w-[1200px] pt-44 pb-16 overflow-visible">
+      <Hero />
     </SectionContainer>
+    
+    <!-- Resto del contenido con ancho original -->
     <div class="space-y-24">
-    <SectionContainer id="experiencia">
-      <TitleSection>
-        <Briefcase class="size-8" />
-        Experiencia laboral
-      </TitleSection>
-      <Experience />
-    </SectionContainer>
+      <SectionContainer id="experiencia" class="w-full mx-auto lg:w-[740px]">
+        <TitleSection>
+          <Briefcase class="size-8" />
+          Experiencia laboral
+        </TitleSection>
+        <Experience />
+      </SectionContainer>
 
-    <SectionContainer id="proyectos">
-      <TitleSection>
-        <!-- <CodeIcon class="size-7" /> -->
-        <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="30">
-        Proyectos
-      </TitleSection>
-      <Projects />
-    </SectionContainer>
+      <SectionContainer id="proyectos" class="w-full mx-auto lg:w-[740px]">
+        <TitleSection>
+          <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="30">
+          Proyectos
+        </TitleSection>
+        <Projects />
+      </SectionContainer>
 
-    <SectionContainer id="tecnologias">
-      <TitleSection>
-        <img src="/icons/tecno.svg" width="30">
-        Tecnologías
-      </TitleSection>
-      <Technologies />
-    </SectionContainer>
+      <SectionContainer id="tecnologias" class="w-full mx-auto lg:w-[740px]">
+        <TitleSection>
+          <img src="/icons/tecno.svg" width="30">
+          Tecnologías
+        </TitleSection>
+        <Technologies />
+      </SectionContainer>
 
-    <SectionContainer id="sobre-mi">
-      <TitleSection>
-        <!-- <ProfileCheck class="size-8" /> -->
-        <!-- <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzV4eWtqZmN5ZXR2NngyaHAwczExN3d0aWVibml3YnFwc3FybjlrbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/jdPMeyv9rn0hZHh8n9/giphy.gif" width ="80"> -->
-
-        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHRmbjBrZWpjYnUzMGd5d3J2bWs1aGt4dmFsNG1zN2hjdm52MWNqaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/zhYSVCirREeIZtONCI/giphy.gif" width ="100">
-        Sobre mí
-      </TitleSection>
-      <AboutMe />
-    </SectionContainer>
-  </div>
+      <SectionContainer id="sobre-mi" class="w-full mx-auto lg:w-[740px]">
+        <TitleSection>
+          <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHRmbjBrZWpjYnUzMGd5d3J2bWs1aGt4dmFsNG1zN2hjdm52MWNqaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/zhYSVCirREeIZtONCI/giphy.gif" width ="100">
+          Sobre mí
+        </TitleSection>
+        <AboutMe />
+      </SectionContainer>
+    </div>
   </main>
 </Layout>
